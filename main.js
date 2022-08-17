@@ -7,8 +7,12 @@ let characters = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L",
 
 let password1 = document.getElementById("password1");
 let password2 = document.getElementById("password2");
+let passwordLength = document.getElementById("password-length");
+let clicked = false;
 
+console.log(passwordLength);
 function generatePassword() {
+  clicked = true
   clearPassword();
   for (let i = 0; i < 15; i++) {
     let charactersRandom1 = Math.floor(Math.random() * characters.length);
@@ -17,9 +21,38 @@ function generatePassword() {
     password1.innerHTML += characters[charactersRandom1];
     password2.innerHTML += characters[charactersRandom2];
   }
+
 }
 
 function clearPassword() {
   password1.innerHTML = ""
   password2.innerHTML = ""
 }
+
+function copy1() {
+  if (clicked === true) {
+    const range = document.createRange();
+    range.selectNode(document.getElementById("password1"));
+    window.getSelection().removeAllRanges();
+    window.getSelection().addRange(range);
+    document.execCommand("copy");
+    window.getSelection().removeAllRanges();
+    alert("Copied first password: " + range);
+  } else {
+    alert("Nothing Copied");
+  }
+}
+
+function copy2() {
+  if (clicked === true) {
+    const range = document.createRange();
+    range.selectNode(document.getElementById("password2"));
+    window.getSelection().removeAllRanges();
+    window.getSelection().addRange(range);
+    document.execCommand("copy");
+    window.getSelection().removeAllRanges();
+    alert("Copied second password: " + range);
+  } else {
+    alert("Nothing Copied");
+  }
+} 

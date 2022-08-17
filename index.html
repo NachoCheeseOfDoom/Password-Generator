@@ -13,9 +13,10 @@
       <h3 class="head3">random password</h3>
       <p class="sub-title">Never use an insecure password again.</p>
       <button onclick="generatePassword()">Generate password</button>
+      <input type="number" min="8" max="20" id="password-length" />
       <div class="bracker"></div>
-      <div class="password" id="password1"></div>
-      <div class="password" id="password2"></div>
+      <div onclick="copy1()" class="password" id="password1"></div>
+      <div onclick="copy2()" class="password" id="password2"></div>
     </div>
     <script src="main.js"></script>
   </body>
