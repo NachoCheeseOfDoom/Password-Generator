@@ -9,16 +9,17 @@ let password1 = document.getElementById("password1");
 let password2 = document.getElementById("password2");
 
 function generatePassword() {
+  clearPassword();
   for (let i = 0; i < 15; i++) {
     let charactersRandom1 = Math.floor(Math.random() * characters.length);
     let charactersRandom2 = Math.floor(Math.random() * characters.length);
+    //password1.innerHTML = characters.push(charactersRandom1);
     password1.innerHTML += characters[charactersRandom1];
     password2.innerHTML += characters[charactersRandom2];
   }
-  //clearPassword();
 }
 
 function clearPassword() {
-  password1.textContent = "f"
-  password2.textContent = "d"
+  password1.innerHTML = ""
+  password2.innerHTML = ""
 }
