@@ -10,11 +10,11 @@ let password2 = document.getElementById("password2");
 let passwordLength = document.getElementById("password-length");
 let clicked = false;
 
-console.log(passwordLength);
 function generatePassword() {
+
   clicked = true
   clearPassword();
-  for (let i = 0; i < 15; i++) {
+  for (let i = 0; i < passwordLength.value; i++) {
     let charactersRandom1 = Math.floor(Math.random() * characters.length);
     let charactersRandom2 = Math.floor(Math.random() * characters.length);
     //password1.innerHTML = characters.push(charactersRandom1);
@@ -23,7 +23,6 @@ function generatePassword() {
   }
 
 }
-
 function clearPassword() {
   password1.innerHTML = ""
   password2.innerHTML = ""
@@ -55,4 +54,4 @@ function copy2() {
   } else {
     alert("Nothing Copied");
   }
-} 
+}
