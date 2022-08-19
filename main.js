@@ -18,8 +18,6 @@ let password2 = document.getElementById("password2");
 let passwordLength = document.getElementById("password-length");
 let clicked = false;
 
-
-
 function generatePassword() {
   if (document.getElementById("radio1").checked) {
     whithSymbols();
