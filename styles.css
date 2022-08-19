@@ -118,42 +118,7 @@ input{
     border-radius: 6px;
     cursor: pointer;
 }
-.selectWrapper {
-  width: 100%;
-  position: relative;
-  opacity: 0;
-  pointer-events: none;
-  transition: opacity 100ms linear 0s;
-  filter: drop-shadow(0 6px 26px rgba(0, 0, 0, 0.24));
-  padding-top: calc(var(--sizeVar) / 2);
-}
-
-.multiSelect {
-  clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
-  border: 1px solid var(--borderColor);
-  box-sizing: border-box;
-  border-radius: calc(var(--sizeVar) / 2);
-  position: absolute;
-  width: auto;
-  left: 0;
-  right: 0;
-  overflow: hidden;
-  background: #ffffff;
-  transition: transform 300ms ease-in-out 0s, clip-path 300ms ease-in-out 0s;
-}
-
-.multiSelect div {
-  color: var(--textPrimary);
-  padding: 16px;
-  width: auto;
-  cursor: pointer;
-}
-.multiSelect div:hover {
-  background-color: #f6f6f6;
-}
-.bottomBorder {
-  border-bottom: 1px solid var(--borderColor);
-}
-.topBorder {
-  border-top: 1px solid var(--borderColor);
+.radio-form{
+  color: white;
+  display: inline;
 }

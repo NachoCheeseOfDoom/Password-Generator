@@ -15,18 +15,10 @@
       <button onclick="generatePassword()">Generate password</button>
       <input value="8" type="number" min="8" max="20" id="password-length" />
 
-      <button class="sec_btn" onclick="openMulti();">Select option</button>
-      <div class="selectWrapper">
-        <div class="multiSelect" id="menu-0">
-          <div class="bottomBorder">New feature vector</div>
-          <div onclick="openMulti();">Vector_01</div>
-          <div onclick="openMulti();">myVector</div>
-          <div onclick="openMulti();">featureVector</div>
-          <div class="topBorder iconDiv" onclick="nextMenu(event);">
-            Other projects<i class="material-icons">arrow_right</i>
-          </div>
-        </div>
-      </div>
+      <form class="radio-form">
+        <input checked type="radio" id="radio1" name="option" />Symbols
+        <input type="radio" id="radio2" name="option" />No symbols
+      </form>
 
       <div class="bracker"></div>
       <div onclick="copy1()" class="password" id="password1"></div>

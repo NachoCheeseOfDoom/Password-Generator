@@ -55,15 +55,15 @@ function copy2() {
     alert("Nothing Copied");
   }
 }
+function verificarCB() {
 
+  if (document.getElementById("radio1").checked) {
+    alert("Estados Unidos esta seleccionado!");
+  }
+  else if (document.getElementById("radio2").checked) {
+    alert("Mexico esta seleccionado!");
 
-function openMulti() {
-  if (document.querySelector(".selectWrapper").style.pointerEvents == "all") {
-    document.querySelector(".selectWrapper").style.opacity = 0;
-    document.querySelector(".selectWrapper").style.pointerEvents = "none";
-    resetAllMenus();
-  } else {
-    document.querySelector(".selectWrapper").style.opacity = 1;
-    document.querySelector(".selectWrapper").style.pointerEvents = "all";
   }
 }
+
+verificarCB();
